@@ -1,8 +1,31 @@
 *{
-    
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    background-color: #27292b ;
+    color: #ebebeb;
+}
+
+h1 {
+    text-align: center;
 }
 
 .gif {
     width: 100%;
     height: 100%;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdownbtn {
+    width: 20%;
+    max-width: 41px;
+    max-height: 41px;
+}
+
+.line {
+    margin-top: 40px;
 }
