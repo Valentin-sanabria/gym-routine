@@ -13,6 +13,18 @@
 <body>
     <h1>Rutina Semanal</h1>
      
+    <div id="blackBackground" class="hidePRO" >
+        <div id="modalKG" class="hidePRO">
+            <table id="seguimientoTable">
+            </table>
+            <p id="closeModal">&#x2716;</p>
+            <input type="text" name="" id="exName">
+            <input type="text" name="" id="exWeight">
+            <input type="text" name="" id="todayDate">
+            <button id="modalOkBtn">Press me</button>
+        </div>
+    </div>
+
     <div class="diaEntero">
         <div class="dropdown">
             <h2>Lunes - Triceps Hombro y Pecho.</h2> 
@@ -24,7 +36,19 @@
             <p>•Estiramientos</p>
             <img src="mp4/stretchbicep.jpg" alt="" class="gif" controls>
             <br>
-
+            <label class="b-contain">
+                <span> </span>
+                <input type="checkbox" />
+                <div class="b-input"></div>
+              </label><label class="b-contain">
+                <span> </span>
+                <input type="checkbox" />
+                <div class="b-input"></div>
+              </label><label class="b-contain">
+                <span> </span>
+                <input type="checkbox" />
+                <div class="b-input"></div>
+              </label>
             <br>
             <p>•Press militar maquina</p>
             <video src="mp4/pressmilitar.mp4" class="gif" controls></video>
@@ -36,19 +60,19 @@
             
             <div class="excerciseNameKgProgress">
                 <p>•Press inclinado +15°</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/inclinepress.mp4" class="gif" controls></video>
             <div class="excerciseNameKgProgress">
                 <p>Seated machine press</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/chestpress.mp4" class="gif" controls></video>
             <div class="excerciseNameKgProgress">
                 <p>•Pectoral Fly</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pectoralfly.mp4" class="gif" controls></video>
@@ -58,7 +82,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Press Frances</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pressfrances.mp4" class="gif" controls></video>
@@ -68,7 +92,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Pressdown Triceps</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/triceppulldown.mp4" class="gif" controls></video>
@@ -78,19 +102,19 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Overhead Triceps</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/overheadtricep.mp4" class="gif" controls></video>
             <!-- <div class="excerciseNameKgProgress">
                 <p>•Press Around</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div> 
             <video src="mp4/pressaround.mp4" class="gif" controls></video>-->
             <!-- <div class="excerciseNameKgProgress">
                 <p>•Press inclinado -15°</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/negativeincline.mp4" class="gif" controls></video> -->
@@ -115,20 +139,20 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Curl 21 c/barra W</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/curl21.mp4" class="gif" controls></video>
             <div class="excerciseNameKgProgress">
                 <p>•Maquina Scott</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="./mp4/maquinascott.mp4" class="gif" controls></video>
         
             <div class="excerciseNameKgProgress">
                 <p>•Biceps martillo</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/bicepMartillo.mp4" class="gif" controls></video>
@@ -141,7 +165,7 @@
             <video src="mp4/calfraise.mp4" class="gif" controls></video>
             <p>•Leg curl Maquina</p>
             <video src="mp4/legcurl.mp4" class="gif" controls></video>
-            <p>•Leg •Extension Maquina</p>
+            <p>•Leg Extension Maquina</p>
             <video src="mp4/legextension.mp4" class="gif" controls></video>
             <p>• Maquina Espalda baja</p>
             <video src=""></video>
@@ -152,7 +176,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Hombros shrug</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/shrug.mp4" class="gif" controls></video>
@@ -162,7 +186,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Pulldown</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pulldown.mp4" class="gif" controls></video>
@@ -172,7 +196,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Straight arm Pulldown polea</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pulldownstraightarm.mp4" class="gif" controls></video> -->
@@ -182,7 +206,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Remo</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/remopolea.mp4" class="gif" controls></video>
@@ -192,7 +216,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Dominada</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/dominada.mp4" class="gif" controls></video> -->
@@ -220,7 +244,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Pressdown Triceps</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/triceppulldown.mp4" class="gif" controls></video>
@@ -230,7 +254,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Overhead Triceps</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/overheadtricep.mp4" class="gif" controls></video>
@@ -240,7 +264,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Pressdown agarre invertido</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pressdowninvertido.mp4" class="gif" controls></video>
@@ -250,7 +274,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Extension con banco</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/fondobanco.mp4" class="gif" controls></video>
@@ -260,7 +284,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Press Frances</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pressfrances.mp4" class="gif" controls></video>
@@ -271,7 +295,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Hombros shrug</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/shrug.mp4" class="gif" controls></video>
@@ -281,7 +305,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Pulldown</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pulldown.mp4" class="gif" controls></video>
@@ -291,7 +315,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Straight arm Pulldown polea</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pulldownstraightarm.mp4" class="gif" controls></video>
@@ -301,7 +325,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Remo</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/remopolea.mp4" class="gif" controls></video>
@@ -311,7 +335,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Dominada</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/dominada.mp4" class="gif" controls></video>
@@ -321,7 +345,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Espalda baja</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <div class="excerciseNameKgProgress">
@@ -331,7 +355,7 @@
                 </div>
                 <p>•Rear delt pullback</p>
                 <video src="mp4/pullback.mp4" class="gif" controls></video>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
         </div>
@@ -388,7 +412,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Pressdown Triceps</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/triceppulldown.mp4" class="gif" controls></video>
@@ -398,7 +422,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Overhead Triceps</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/overheadtricep.mp4" class="gif" controls></video>
@@ -408,7 +432,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Pressdown agarre invertido</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pressdowninvertido.mp4" class="gif" controls></video>
@@ -418,7 +442,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Extension con banco</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/fondobanco.mp4" class="gif" controls></video>
@@ -428,7 +452,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Press Frances</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pressfrances.mp4" class="gif" controls></video>
@@ -439,7 +463,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Hombros shrug</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/shrug.mp4" class="gif" controls></video>
@@ -449,7 +473,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Pulldown</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pulldown.mp4" class="gif" controls></video>
@@ -459,7 +483,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Straight arm Pulldown polea</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/pulldownstraightarm.mp4" class="gif" controls></video>
@@ -469,7 +493,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Remo</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/remopolea.mp4" class="gif" controls></video>
@@ -479,7 +503,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Dominada</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
             <video src="mp4/dominada.mp4" class="gif" controls></video>
@@ -489,7 +513,7 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Espalda baja</p>
-                <img src="img/kg.png" class="icon" alt="">
+                <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
         </div>
