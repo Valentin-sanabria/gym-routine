@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +16,12 @@
      
     <div id="blackBackground" class="hidePRO" >
         <div id="modalKG" class="hidePRO">
+            <p id="closeModal">&#x2716;</p>
             <table id="seguimientoTable">
             </table>
-            <p id="closeModal">&#x2716;</p>
-            <input type="text" name="" id="exName">
-            <input type="text" name="" id="exWeight">
-            <input type="text" name="" id="todayDate">
+            <input type="text" name="" id="exName" class="modalInput">
+            <input type="text" name="" id="exWeight" class="modalInput"> 
+            <input type="text" name="" id="todayDate" class="modalInput">
             <button id="modalOkBtn">Press me</button>
         </div>
     </div>
@@ -354,10 +355,10 @@
                     <label for="demo_opt_1"></label>
                 </div>
                 <p>•Rear delt pullback</p>
-                <video src="mp4/pullback.mp4" class="gif" controls></video>
                 <img src="img/kg.png" class="icon kgFollowing" alt="">
                 <img src="img/progress.png" class="icon" alt="">
             </div>
+            <video src="mp4/pullback.mp4" class="gif" controls></video>
         </div>
 
         <hr class="line">

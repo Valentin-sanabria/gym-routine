@@ -1,5 +1,6 @@
 let dropdownBtn = document.querySelectorAll(".dropdownbtn");
 let kgFollowing = document.querySelectorAll(".kgFollowing");
+let tableRows = document.querySelectorAll("tbody .tableRows");
 let blackBackground = document.getElementById("blackBackground");
 let modalKG = document.getElementById("modalKG");
 let closeModal = document.getElementById("closeModal");
@@ -10,6 +11,7 @@ let modalOkBtn = document.getElementById("modalOkBtn");
 let seguimientoTable = document.getElementById("seguimientoTable");
 
 loadTable();
+loadRowsForEach();
 
 dropdownBtn.forEach(element => {
     element.addEventListener("click", function() {
@@ -80,12 +82,18 @@ function createTableRow() {
     const dateRow = document.createElement("td");
     dateRow.innerText = todayDateinput.value;
 
+    newTableRow.classList.add("tableRows");
+
+
     seguimientoTable.appendChild(newTableRow);
     newTableRow.appendChild(exNameRow);
     newTableRow.appendChild(exWeightRow);
     newTableRow.appendChild(dateRow);
-    console.log(seguimientoTable.innerHTML);
+
+    tableRows = document.querySelectorAll(".tableRows");
+
     saveChangesTable();
+    loadRowsForEach();
 }
 
 function saveChangesTable() {
@@ -93,6 +101,21 @@ function saveChangesTable() {
 }
 
 function loadTable() {
-    seguimientoTable.innerHTML = JSON.parse(localStorage.getItem("allExcercisesWithWeight"));
-    
+    seguimientoTable.innerHTML = JSON.parse(localStorage.getItem("allExcercisesWithWeight"));    
+    tableRows = document.querySelectorAll(".tableRows");
+    console.log(tableRows);
+}
+
+function loadRowsForEach() {
+
+    tableRows.forEach(row => {
+        row.addEventListener("click", function() {
+            console.log(row.classList);
+            if(row.classList.contains("rowAlreadyClicked")){
+                row.remove();
+            } else {
+                row.classList.add("rowAlreadyClicked");
+            }
+        })
+    });
 }
