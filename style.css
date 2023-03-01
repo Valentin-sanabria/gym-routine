@@ -58,7 +58,6 @@ h1 {
 
 #modalKG {
   position: fixed;
-  top: 30%;
   background-color: #373a3d;
   padding: 6px;
   min-width: 80%;
@@ -66,15 +65,16 @@ h1 {
 }
 
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 #seguimientoTable {
   width: 100vw;
+  max-height: 200px;
+  overflow-y: scroll;
+  display:block;
+	border-collapse: collapse;
+	border-spacing: 0;
   
 }
+
 
 td {
   padding: 12px;
