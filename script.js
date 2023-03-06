@@ -1,6 +1,7 @@
 let dropdownBtn = document.querySelectorAll(".dropdownbtn");
 let kgFollowing = document.querySelectorAll(".kgFollowing");
 let tableRows = document.querySelectorAll("tbody .tableRows");
+let calentamientoTitles = document.querySelectorAll(".calentamientoTitle");
 let blackBackground = document.getElementById("blackBackground");
 let modalKG = document.getElementById("modalKG");
 let closeModal = document.getElementById("closeModal");
@@ -20,13 +21,25 @@ dropdownBtn.forEach(element => {
     });
 });
 
+calentamientoTitles.forEach(element => {
+    element.addEventListener("click", function() {
+        let foldSection = element.parentElement.children[1]
+        console.log(foldSection);
+        if(foldSection.classList.contains("folded")){
+            foldSection.style.display = "";
+            foldSection.classList.remove("folded");
+        } else {
+            foldSection.style.display = "none";
+            foldSection.classList.add("folded");
+        }
+    });
+});
+
 
 function hide(element){
     
     let foldSection = element.parentElement.parentElement.children[1]
-
-    // console.log(foldSection.classList);
-
+    console.log(foldSection);
     if(foldSection.classList.contains("folded")){
         foldSection.style.display = "";
         foldSection.classList.remove("folded");
@@ -37,7 +50,6 @@ function hide(element){
 }
 
 function rotateBtn(dropdownBtn) {
-    console.log(dropdownBtn.classList);
     if(dropdownBtn.classList.contains("folded")){
         dropdownBtn.style.transform ='rotate(0deg)'; 
         dropdownBtn.classList.remove("folded");
@@ -52,10 +64,13 @@ function showhideModal() {
         blackBackground.classList.remove("showPRO");
         blackBackground.style.display = "none";
         blackBackground.classList.add("hidePRO");
+        console.log("ESCONDE MODAL");
     } else if (blackBackground.classList.contains("hidePRO")) {
         blackBackground.classList.remove("hidePRO");
         blackBackground.style.display = "";
         blackBackground.classList.add("showPRO");
+        console.log("MUESTRA MODAL");
+
     }
 }
 
@@ -103,18 +118,28 @@ function saveChangesTable() {
 function loadTable() {
     seguimientoTable.innerHTML = JSON.parse(localStorage.getItem("allExcercisesWithWeight"));    
     tableRows = document.querySelectorAll(".tableRows");
-    console.log(tableRows);
 }
 
 function loadRowsForEach() {
 
     tableRows.forEach(row => {
-        row.addEventListener("click", function() {
-            console.log(row.classList);
+        row.childNodes[0].addEventListener("click", function() {
             if(row.classList.contains("rowAlreadyClicked")){
                 row.remove();
-            } else {
+            } else if(!row.classList.contains("rowAlreadyClicked")) {
                 row.classList.add("rowAlreadyClicked");
+            }
+        })
+
+        row.childNodes[1].addEventListener("click", function() {
+            if(row.classList.contains("rowAlreadyClicked")){
+                row.classList.remove("rowAlreadyClicked");
+            }
+        })
+
+        row.childNodes[2].addEventListener("click", function() {
+            if(row.classList.contains("rowAlreadyClicked")){
+                row.classList.remove("rowAlreadyClicked");    
             }
         })
     });
