@@ -1,6 +1,8 @@
 let dropdownBtn = document.querySelectorAll(".dropdownbtn");
 let kgFollowing = document.querySelectorAll(".kgFollowing");
 let tableRows = document.querySelectorAll("tbody .tableRows");
+let allTDs = document.querySelectorAll("td");
+let filteredTDs = [];
 let calentamientoTitles = document.querySelectorAll(".calentamientoTitle");
 let blackBackground = document.getElementById("blackBackground");
 let modalKG = document.getElementById("modalKG");
@@ -10,6 +12,7 @@ let exWeightinput = document.getElementById("exWeight");
 let todayDateinput = document.getElementById("todayDate");
 let modalOkBtn = document.getElementById("modalOkBtn");
 let seguimientoTable = document.getElementById("seguimientoTable");
+let filterInputModal = document.getElementById("filterInputModal");
 
 loadTable();
 loadRowsForEach();
@@ -21,10 +24,61 @@ dropdownBtn.forEach(element => {
     });
 });
 
+filterInputModal.addEventListener("keydown", function() {
+    allTDs = document.querySelectorAll("td");
+
+    // if(filterInputModal.value.length > 1) {
+    //     filteredTDs = Array.from(allTDs).filter(excercise =>{
+    //         if(excercise.innerText.includes(filterInputModal.value)) {
+    //             return excercise;
+    //         }
+    //     })
+    Array.from(allTDs).forEach(excercise => {
+        if( !excercise.innerHTML.includes(filterInputModal.value) ) {
+            console.log(excercise.innerHTML);
+            console.log("no matchea con");
+            console.log(filterInputModal.value);
+            if(excercise.parentElement.childNodes[0].innerText !== filterInputModal.value) {
+                hideCompatibleWithEverything(excercise);
+            }
+        }
+    });
+        // Array.from(allTDs).forEach(excercise => {
+        //     for(let i=0; i<filteredTDs.length-1; i++) {
+        //         if(excercise.outerHTML !== filteredTDs[i].outerHTML) {
+        //             console.log(excercise.outerHTML);
+        //             console.log("no matchea con");
+        //             console.log(filteredTDs[i].outerHTML);
+        //             hideCompatibleWithEverything(excercise);
+        //         }
+        //     }
+        // });
+
+
+    if(filterInputModal.value === "") {
+        Array.from(allTDs).forEach(excercise => {
+                    showCompatibleWithEverything(excercise);
+            })
+    }
+
+});
+
+function hideCompatibleWithEverything(element) {
+    if(element.style.display !== "none") {
+        element.style.display = "none";
+    }
+}
+
+function showCompatibleWithEverything(element) {
+    if(element.style.display === "none") {
+        element.style.display = "";
+    }
+}
+
 calentamientoTitles.forEach(element => {
     element.addEventListener("click", function() {
-        let foldSection = element.parentElement.children[1]
-        console.log(foldSection);
+        let foldSection = document.querySelector(".calentamientoSection");
+
         if(foldSection.classList.contains("folded")){
             foldSection.style.display = "";
             foldSection.classList.remove("folded");
