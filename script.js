@@ -27,7 +27,7 @@ dropdownBtn.forEach(element => {
 filterInputModal.addEventListener("keydown", function() {
     allTDs = document.querySelectorAll("td");
 
-    // if(filterInputModal.value.length > 1) {
+    if(filterInputModal.value.length > 1) {
     //     filteredTDs = Array.from(allTDs).filter(excercise =>{
     //         if(excercise.innerText.includes(filterInputModal.value)) {
     //             return excercise;
@@ -35,14 +35,17 @@ filterInputModal.addEventListener("keydown", function() {
     //     })
     Array.from(allTDs).forEach(excercise => {
         if( !excercise.innerHTML.includes(filterInputModal.value) ) {
-            console.log(excercise.innerHTML);
-            console.log("no matchea con");
-            console.log(filterInputModal.value);
-            if(excercise.parentElement.childNodes[0].innerText !== filterInputModal.value) {
-                hideCompatibleWithEverything(excercise);
+            hideCompatibleWithEverything(excercise);
+            if(excercise.parentElement.childNodes[0].innerText.includes(filterInputModal.value)) {
+                console.log(excercise.parentElement.childNodes[0].innerText);
+                console.log("INCLUYE");
+                console.log(filterInputModal.value);
+                showCompatibleWithEverything(excercise);
             }
         }
     });
+
+}
         // Array.from(allTDs).forEach(excercise => {
         //     for(let i=0; i<filteredTDs.length-1; i++) {
         //         if(excercise.outerHTML !== filteredTDs[i].outerHTML) {
