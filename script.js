@@ -26,17 +26,19 @@ dropdownBtn.forEach(element => {
 
 filterInputModal.addEventListener("keydown", function() {
     allTDs = document.querySelectorAll("td");
-
+    console.log("pene");
     if(filterInputModal.value.length > 1) {
     //     filteredTDs = Array.from(allTDs).filter(excercise =>{
     //         if(excercise.innerText.includes(filterInputModal.value)) {
     //             return excercise;
     //         }
     //     })
+    console.log(allTDs);
+
     Array.from(allTDs).forEach(excercise => {
-        if( !excercise.innerHTML.includes(filterInputModal.value) ) {
+        if( !excercise.innerHTML.toLowerCase().includes(filterInputModal.value.toLowerCase()) ) {
             hideCompatibleWithEverything(excercise);
-            if(excercise.parentElement.childNodes[0].innerText.includes(filterInputModal.value)) {
+            if(excercise.parentElement.childNodes[0].innerText.toLowerCase().includes(filterInputModal.value.toLowerCase())) {
                 console.log(excercise.parentElement.childNodes[0].innerText);
                 console.log("INCLUYE");
                 console.log(filterInputModal.value);
