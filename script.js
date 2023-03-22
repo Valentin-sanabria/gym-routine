@@ -26,7 +26,7 @@ dropdownBtn.forEach(element => {
 
 filterInputModal.addEventListener("keydown", function() {
     allTDs = document.querySelectorAll("td");
-
+    console.log("pene");
     if(filterInputModal.value.length > 1) {
         Array.from(allTDs).forEach(excercise => {
             if( !excercise.innerHTML.includes(filterInputModal.value) ) {
